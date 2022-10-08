@@ -1,8 +1,15 @@
+:root {
+    --darker: rgb(16, 16, 16);
+    --darker-tp: rgba(16, 16, 16, 0.9);
+    --grey-text: rgb(177, 177, 177);
+}
+
 body {
     background-image: url("../images/cat-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -14,20 +21,21 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .bg-darker {
-    background-color: rgba(16, 16, 16);
+    background-color: var(--darker);
 }
 
 .bg-darker-tp {
-    background-color: rgba(16, 16, 16, 0.9);
+    background-color: var(--darker-tp);
 }
 
-#navbar {
+#navbar-container {
     --bs-gutter-x: 0;
     font-family: 'Francois One', sans-serif;
 }
 
 .nav-link {
     font-size: 1.25rem;
+    color: var(--grey-text);
 }
 
 #controller-icon {
@@ -43,16 +51,27 @@ h1, h2, h3, h4, h5, h6, p {
     padding-left: 1rem;
 }
 
-nav {
-    font-size: 1.5rem;;
-}
-
 .card {
-    --bs-card-border-width: 0;
-    --bs-card-border-radius: 0;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5;
 }
 
-.card-header {
+.card-h2 {
     color: whitesmoke;
+    background: linear-gradient(0deg, rgb(75, 75, 75), rgb(45, 45, 45), rgb(15, 15, 15));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
+.supplemental-text {
+    color: var(--grey-text);
+    font-weight: 500;
+}
+
+.supplemental-tex {
+    color: rgb(246, 255, 125);
+    font-weight: 500;
+}

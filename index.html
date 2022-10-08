@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speedrun Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/reset.css'> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Francois+One&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/main.css'>
 </head>
 <body>
-    <div class="container-fluid" id="navbar">
+    <div class="container-fluid" id="navbar-container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-darker">
             <a href="#" class="navbar-brand" id="title">
                 <img src="./assets/images/controller-icon-angled.png" alt="Icon of a Super Nintendo controller" width="50" height="50" class="d-inline-block" id="controller-icon" />
@@ -47,195 +45,335 @@
             <div class="col-1"></div>
             <div id="left-panel" class="col-2">
                 <div id="about-me" class="card mt-3 bg-darker-tp">
+                    <h2 class="card-h2 text-center">About Me</h1>
                     <div class="card-body">
-                        <h2 class="card-header text-center">About Me</h1>
                         <p class="card-text p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sit dolorum vel, iusto quod maiores ea ratione reprehenderit dignissimos repellendus ipsum, inventore distinctio rem quaerat est excepturi. Necessitatibus, esse aliquid!</p>
                     </div>
                 </div>
                 <div id="latest-run" class="card mt-3 bg-darker-tp">
+                    <h2 class="card-h2 text-center">Latest Speedrun</h1>
                     <div class="card-body">
-                        <h2 class="card-header text-center">Latest Speedrun</h1>
                         <p class="card-text p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sit dolorum vel, iusto quod maiores ea ratione reprehenderit dignissimos repellendus ipsum, inventore distinctio rem quaerat est excepturi. Necessitatibus, esse aliquid!</p>
                     </div>
                 </div>
                 <div id="plans" class="card mt-3 bg-darker-tp">
+                    <h2 class="card-h2 text-center">Speedrun Plans</h1>
                     <div class="card-body">
-                        <h2 class="card-header text-center">Speedrun Plans</h1>
                         <p class="card-text p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sit dolorum vel, iusto quod maiores ea ratione reprehenderit dignissimos repellendus ipsum, inventore distinctio rem quaerat est excepturi. Necessitatibus, esse aliquid!</p>
                     </div>
                 </div>
             </div>
             <div id="right-panel" class="col-8">
                 <div id="my-speedruns" class="card mt-3 bg-darker-tp">
+                    <h2 class="card-h2 text-center">My Speedruns</h1>
                     <div class="card-body">
-                        <h2 class="card-header text-center">My Speedruns</h1>
                         <div id="speedrun-cards" class="container-fluid p-3">
                             <div class="row gy-4">
                                 <div class="col-6">
-                                    <div id="dkc-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Country (SNES, 1994)</h3>
-                                            <img src="./assets/images/dkc-box-art"/>
-                                            <p>Favorite Category: No Major Glitches (NMG)</p>
-                                            <p>Personal Best: <span id="dkc-pb"></span></p>
-                                            <p>Current Standing: <span id="dkc-standing"></span></p>
-                                            <button id="dkc-btn" class="">More Details</button>
+                                    <div id="dkc-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Country</h4>
+                                                    <p class="supplemental-text">SNES, 1994</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">No Major Glitches (NMG)</span></p>
+                                                        <p>Personal Best: <span id="dkc-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkc-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkc-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkc-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="dkc2-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Country 2 (SNES, 1995)</h3>
-                                            <img src="./assets/images/dkc2-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="dkc2-pb"></span></p>
-                                            <p>Current Standing: <span id="dkc2-standing"></span></p>
-                                            <button id="dkc2-btn" class="">More Details</button>
+                                    <div id="dkc2-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Country 2</h4>
+                                                    <p class="supplemental-text">SNES, 1995</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="dkc2-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkc2-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkc2-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkc2-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="dkc3-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Country 3 (SNES, 1996)</h3>
-                                            <img src="./assets/images/dkc3-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="dkc3-pb"></span></p>
-                                            <p>Current Standing: <span id="dkc3-standing"></span></p>
-                                            <button id="dkc3-btn" class="">More Details</button>
+                                    <div id="dkc3-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Country 3</h4>
+                                                    <p class="supplemental-text">SNES, 1996</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="dkc3-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkc3-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkc3-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkc3-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="yoshi-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Super Mario World 2: Yoshi's Island (SNES, 1995)</h3>
-                                            <img src="./assets/images/yoshi-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="yoshi-pb"></span></p>
-                                            <p>Current Standing: <span id="yoshi-standing"></span></p>
-                                            <button id="yoshi-btn" class="">More Details</button>
+                                    <div id="yoshi-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Yoshi's Island</h4>
+                                                    <p class="supplemental-text">SNES, 1995</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Warpless</span></p>
+                                                        <p>Personal Best: <span id="yoshi-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="yoshi-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="yoshi-standing"></span></p>
+                                                    </div>
+                                                    <button id="yoshi-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="mmx2-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Mega Man X2 (SNES, 1994)</h3>
-                                            <img src="./assets/images/mmx2-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="mmx2-pb"></span></p>
-                                            <p>Current Standing: <span id="mmx2-standing"></span></p>
-                                            <button id="mmx2-btn" class="">More Details</button>
+                                    <div id="mmx2-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Mega Man X2</h4>
+                                                    <p class="supplemental-text">SNES, 1994</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="mmx2-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="mmx2-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="mmx2-standing"></span></p>
+                                                    </div>
+                                                    <button id="mmx2-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="mmx3-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Mega Man X3 (SNES, 1995)</h3>
-                                            <img src="./assets/images/mmx3-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="mmx3-pb"></span></p>
-                                            <p>Current Standing: <span id="mmx3-standing"></span></p>
-                                            <button id="mmx3-btn" class="">More Details</button>
+                                    <div id="mmx3-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Mega Man X3</h4>
+                                                    <p class="supplemental-text">SNES, 1995</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="mmx3-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="mmx3-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="mmx3-standing"></span></p>
+                                                    </div>
+                                                    <button id="mmx3-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="bubsy-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Bubsy In: Claws Encouters of the Furred Kind (SNES, 1993)</h3>
-                                            <img src="./assets/images/bubsy-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="bubsy-pb"></span></p>
-                                            <p>Current Standing: <span id="bubsy-standing"></span></p>
-                                            <button id="bubsy-btn" class="">More Details</button>
+                                    <div id="bubsy-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Bubsy</h4>
+                                                    <p class="supplemental-text">SNES, 1993</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="bubsy-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="bubsy-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="bubsy-standing"></span></p>
+                                                    </div>
+                                                    <button id="bubsy-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>    
                                 </div>    
                                 <div class="col-6">
-                                    <div id="dkc-gba-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Country (GBA, 2003)</h3>
-                                            <img src="./assets/images/dkc-gba-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="dkc-gba-pb"></span></p>
-                                            <p>Current Standing: <span id="dkc-gba-standing"></span></p>
-                                            <button id="dkc-gba-btn" class="">More Details</button>
+                                    <div id="dkc-gba-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Country</h4>
+                                                    <p class="supplemental-text">GBA, 2003</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="dkc-gba-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkc-gba-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkc-gba-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkc-gba-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="dkl-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Land (GB, 1995)</h3>
-                                            <img src="./assets/images/dkl-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="dkl-pb"></span></p>
-                                            <p>Current Standing: <span id="dkl-standing"></span></p>
-                                            <button id="dkl-btn" class="">More Details</button>
+                                    <div id="dkl-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Land</h4>
+                                                    <p class="supplemental-text">GB, 1995</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="dkl-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkl-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkl-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkl-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="dkl3-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Donkey Kong Land III (GBC, 1997)</h3>
-                                            <img src="./assets/images/dkl3-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="dkl3-pb"></span></p>
-                                            <p>Current Standing: <span id="dkl3-standing"></span></p>
-                                            <button id="dkl3-btn" class="">More Details</button>
+                                    <div id="dkl3-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Donkey Kong Land III</h4>
+                                                    <p class="supplemental-text">GBC, 1997</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Any%</span></p>
+                                                        <p>Personal Best: <span id="dkl3-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="dkl3-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="dkl3-standing"></span></p>
+                                                    </div>
+                                                    <button id="dkl3-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                <div id="evo-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>E.V.O.: Search for Eden (SNES, 1992)</h3>
-                                            <img src="./assets/images/evo-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="evo-pb"></span></p>
-                                            <p>Current Standing: <span id="evo-standing"></span></p>
-                                            <button id="evo-btn" class="">More Details</button>
+                                <div id="evo-card" class="card bg-darker" style="max-width: 576px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                        </div>
+                                        <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>E.V.O.: Search for Eden</h4>
+                                                    <p class="supplemental-text">SNES, 1992</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Dino JP</span></p>
+                                                        <p>Personal Best: <span id="evo-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="evo-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="evo-standing"></span></p>
+                                                    </div>
+                                                    <button id="evo-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="pape-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Paperboy 2 (SNES, 1991)</h3>
-                                            <img src="./assets/images/pape-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="pape-pb"></span></p>
-                                            <p>Current Standing: <span id="pape-standing"></span></p>
-                                            <button id="pape-btn" class="">More Details</button>
+                                    <div id="pape-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Paperboy 2</h4>
+                                                    <p class="supplemental-text">SNES, 1991</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Easy Street - Perfect Delivery</span></p>
+                                                        <p>Personal Best: <span id="pape-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="pape-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="pape-standing"></span></p>
+                                                    </div>
+                                                    <button id="pape-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="stadium1-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Pokémon Stadium (N64, 1999)</h3>
-                                            <img src="./assets/images/stadium1-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="stadium1-pb"></span></p>
-                                            <p>Current Standing: <span id="stadium1-standing"></span></p>
-                                            <button id="stadium1-btn" class="">More Details</button>
+                                    <div id="stadium1-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Pokémon Stadium</h4>
+                                                    <p class="supplemental-text">N64, 1999</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Gym Leader Castle Round 1</span></p>
+                                                        <p>Personal Best: <span id="stadium1-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="stadium1-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="stadium1-standing"></span></p>
+                                                    </div>
+                                                    <button id="stadium1-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div id="stadium2-card" class="card bg-dark">
-                                        <div class="card-body">
-                                            <h3>Pokémon Stadium 2 (N64, 2000)</h3>
-                                            <img src="./assets/images/stadium2-box-art"/>
-                                            <p>Favorite Category: Any%</p>
-                                            <p>Personal Best: <span id="stadium2-pb"></span></p>
-                                            <p>Current Standing: <span id="stadium2-standing"></span></p>
-                                            <button id="stadium2-btn" class="">More Details</button>
+                                    <div id="stadium2-card" class="card bg-darker" style="max-width: 576px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./assets/images/dkc-box-art.png" class="img-fluid rounded-start" alt="Box art for Donkey Kong Country (SNES)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4>Pokémon Stadium 2</h4>
+                                                    <p class="supplemental-text">N64, 2000</p>
+                                                    <div class="my-2">
+                                                        <p>Favorite Category: <span class="supplemental-text">Gym Leader Castle Round 1</span></p>
+                                                        <p>Personal Best: <span id="stadium2-pb"></span></p>
+                                                        <p>Date Last Ran: <span id="stadium2-pb-date"></span></p>
+                                                        <p>Current Standing: <span id="stadium2-standing"></span></p>
+                                                    </div>
+                                                    <button id="stadium2-btn" type="button" class="btn btn-light">More Details</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -244,8 +382,8 @@
                     </div>
                 </div>
             </div>
+            <div class="col-1"></div>
         </div>
-        <div class="col-1"></div>
     </div>
     <div id="socials">
         <h1>Social Media</h1>
