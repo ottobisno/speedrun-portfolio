@@ -2,6 +2,7 @@
     --darker: rgb(16, 16, 16);
     --darker-tp: rgba(16, 16, 16, 0.9);
     --grey-text: rgb(177, 177, 177);
+    --light: whitesmoke;
 }
 
 body {
@@ -49,13 +50,13 @@ h4 {
     font-size: 40px;
     font-family: 'Francois One', sans-serif;
     font-weight: bolder;
-    color: whitesmoke;
+    color: var(--light);
     padding-left: 1rem;
 }
 
 .card {
     border-width: 1px;
-    border-color: whitesmoke;
+    border-color: var(--light);
     border-radius: 5;
 }
 
@@ -71,10 +72,12 @@ h4 {
 }
 
 .card-h2 {
-    color: whitesmoke;
+    color: var(--light);
     background: linear-gradient(0deg, rgb(75, 75, 75), rgb(45, 45, 45), rgb(15, 15, 15));
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 0;
@@ -83,15 +86,7 @@ h4 {
 .border-bot {
     border-bottom: solid;
     border-width: 1px;
-    border-color: whitesmoke;
-
-}
-
-.border-right {
-    border-right: solid;
-    border-width: 1px;
-    border-color: whitesmoke;
-
+    border-color: var(--light);
 }
 
 .supplemental-text {
@@ -108,6 +103,15 @@ h4 {
     max-width: 1400px;
 }
 
+/* Keep an eye on this, might need to specify container-lg once I update classes */
+.container {
+    max-width: 1120px;
+}
+
+.img-fluid {
+    min-width: 100%;
+}
+
 .soc-med-icon {
     text-decoration: none;
     padding-right: 1rem;
@@ -115,18 +119,30 @@ h4 {
 }
 
 
-/* @media screen and (min-width: 1920px) {
-    .card p {
-        font-size: calc(15px + 0.23vw);
+@media screen and (max-width: 1200px) {
+    .border-run-card {
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: var(--light);
     }
-    .card h4 {
-        font-size: calc(24px + 0.35vw);
-    }
-} */
 
-/* @media screen and (min-width: 1540px) {
-    p, .supplemental-text {
-        font-size: 16px;
+    .rounded-run-card {
+        border-top-left-radius: var(--bs-border-radius)!important;
+        border-top-right-radius: var(--bs-border-radius)!important;
     }
-} */
+}
+
+@media screen and (min-width: 1200px) {
+    .border-run-card {
+        border-right: solid;
+        border-width: 1px;
+        border-color: var(--light);
+    }
+    
+    .rounded-run-card {
+        border-bottom-left-radius: var(--bs-border-radius)!important;
+        border-top-left-radius: var(--bs-border-radius)!important;
+    }
+}
+
 
