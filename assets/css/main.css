@@ -16,8 +16,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Francois One', sans-serif;
     font-weight: bolder;
     color: whitesmoke;
-    margin: 0;
-    padding: 0;
+}
+
+h4 {
+    margin-bottom: 0;
 }
 
 .bg-darker {
@@ -57,6 +59,17 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 5;
 }
 
+.card-body {
+    padding: 10px;
+    /* padding-top: 0;
+    padding-bottom: 0; */
+}
+
+.card-body p {
+    font-weight: normal;
+    margin-bottom: auto;
+}
+
 .card-h2 {
     color: whitesmoke;
     background: linear-gradient(0deg, rgb(75, 75, 75), rgb(45, 45, 45), rgb(15, 15, 15));
@@ -64,6 +77,21 @@ h1, h2, h3, h4, h5, h6, p {
     padding-bottom: 1rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    margin-bottom: 0;
+}
+
+.border-bot {
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+
+}
+
+.border-right {
+    border-right: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+
 }
 
 .supplemental-text {
@@ -71,7 +99,34 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 500;
 }
 
-.supplemental-tex {
-    color: rgb(246, 255, 125);
-    font-weight: 500;
+.game-info {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
+
+.container-xxl {
+    max-width: 1400px;
+}
+
+.soc-med-icon {
+    text-decoration: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+/* @media screen and (min-width: 1920px) {
+    .card p {
+        font-size: calc(15px + 0.23vw);
+    }
+    .card h4 {
+        font-size: calc(24px + 0.35vw);
+    }
+} */
+
+/* @media screen and (min-width: 1540px) {
+    p, .supplemental-text {
+        font-size: 16px;
+    }
+} */
+
