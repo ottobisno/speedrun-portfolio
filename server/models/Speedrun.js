@@ -3,16 +3,17 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const speedrunSchema = new Schema({
-    game_title: {
-        type: String,
-        required: true,
-    },
-    game_release_date: {
-        type: Date,
+    game: {
+        type: Schema.Types.ObjectId,
+        ref: 'Game',
         required: true
     },
     category: {
         type: String,
+        required: true
+    },
+    main_category: {
+        type: Boolean,
         required: true
     },
     personal_best: {
