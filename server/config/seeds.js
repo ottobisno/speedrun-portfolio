@@ -9,8 +9,12 @@ let speedrunData = [];
 
 // Rewrite this to be db.once etc if you can do it all in one function
 db.once('open', async () => {
-    // Populating database with game data
+    
+    // Clearing out any existing documents
     await Game.deleteMany({});
+    await Speedrun.deleteMany({});
+
+    // Populating database with game data
     const games = await Game.create(gameData);
 
     // Fetching data from the Speedrun.com API to populate speedrun data
@@ -31,9 +35,9 @@ db.once('open', async () => {
         process.exit(1);
     }
 
-    await Speedrun.deleteMany({});
+    // Populating the database with the processes speedrun data
     await Speedrun.create(speedrunData)
 
-    console.log('The database has been seeded!');
+    console.log('The database has been seeded~');
     process.exit(0);
 });
