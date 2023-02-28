@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const gameSchema = new Schema({
-    game_title: {
+    title: {
         type: String,
         required: true,
     },
-    game_release_date: {
-        type: Date,
+    release_year: {
+        type: String,
         required: true
     },
     platform: {

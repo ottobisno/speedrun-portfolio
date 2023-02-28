@@ -26,7 +26,7 @@ function formatPB(pb) {
 };
 
 // Function for taking the category id from the Speedrun.com API and using that to populate the array with the respective data
-function processSpeedrunData(data) {
+function processSpeedrunData(data, games, speedrunData) {
     for (let i = 0; i < data.data.length; i++) {
         switch(data.data[i].run.category) {
             // Using known category ids from API to populate each individual speedrun object
@@ -311,6 +311,7 @@ function processSpeedrunData(data) {
                 break;
         }
     }
+    return speedrunData;
 };
 
 module.exports = { processSpeedrunData };
