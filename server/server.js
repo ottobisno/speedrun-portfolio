@@ -20,6 +20,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
+// If app is used in production, use an express.static binding to link all static files from the client/build directory
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+// When running in dev, set up static file linkage at the root endpoint
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
+})
+
 // Creating a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();

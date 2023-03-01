@@ -21,7 +21,7 @@ const speedrunSchema = new Schema({
         required: true
     },
     date_played: {
-        type: Date,
+        type: String,
         required: true
     },
     current_placement: {

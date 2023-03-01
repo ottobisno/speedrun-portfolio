@@ -1,7 +1,7 @@
 const db = require('./connection');
 const { Game, Speedrun } = require('../models');
 const fetch = require('node-fetch');
-const gameData = require('../seeders/gameData.json');
+const gameData = require('./seeders/gameData.json');
 const { processSpeedrunData } = require('../utils/conversion');
 
 // Defining empty array to hold the processed speedrunData from the Speedrun.com API

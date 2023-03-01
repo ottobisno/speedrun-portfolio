@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+:root {
+  --darker: rgb(16, 16, 16);
+  --darker-tp: rgba(16, 16, 16, 0.9);
+  --grey-text: rgb(177, 177, 177);
+  --light: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("./img/other/cat-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Francois One', sans-serif;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.bg-darker {
+  background-color: var(--darker);
+}
+
+.bg-darker-tp {
+  background-color: var(--darker-tp);
+}
+
+#navbar-container {
+  --bs-gutter-x: 0;
+  font-family: 'Francois One', sans-serif;
+}
+
+.nav-link {
+  font-size: 1.25rem !important;
+  color: var(--grey-text);
+}
+
+#controller-icon {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  margin-right: 0.5rem;
+}
+
+#title {
+  font-size: 40px;
+  font-family: 'Francois One', sans-serif;
+  font-weight: bolder;
+  color: var(--light);
+  padding-left: 1rem;
+}
+
+.card {
+  border-width: 1px;
+  border-color: var(--light);
+  border-radius: 5;
+}
+
+.card-body {
+  padding: 10px;
+  /* padding-top: 0;
+  padding-bottom: 0; */
+}
+
+.card-body p {
+  font-weight: normal;
+  margin-bottom: auto;
+}
+
+.card-h2 {
+  color: var(--light);
+  background: linear-gradient(0deg, rgb(75, 75, 75), rgb(45, 45, 45), rgb(15, 15, 15));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 0;
+}
+
+.border-bot {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: var(--light);
+}
+
+.supplemental-text {
+  color: var(--grey-text);
+  font-weight: 500;
+}
+
+.game-info {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.container-xxl {
+  max-width: 1400px;
+}
+
+/* Keep an eye on this, might need to specify container-lg once I update classes */
+.container {
+  max-width: 1120px;
+}
+
+.img-fluid {
+  min-width: 100%;
+}
+
+.soc-med-icon {
+  text-decoration: none;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .border-run-card {
+      border-bottom: solid;
+      border-width: 1px;
+      border-color: var(--light);
+  }
+  .rounded-run-card {
+      border-top-left-radius: var(--bs-border-radius)!important;
+      border-top-right-radius: var(--bs-border-radius)!important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 1200px) {
+  .border-run-card {
+      border-right: solid;
+      border-width: 1px;
+      border-color: var(--light);
   }
-  to {
-    transform: rotate(360deg);
+  .rounded-run-card {
+      border-bottom-left-radius: var(--bs-border-radius)!important;
+      border-top-left-radius: var(--bs-border-radius)!important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #controller-icon {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 491px) {
+  #title {
+      font-size: calc(30px + 0.3vw);
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .navbar {
+      justify-content: center;
+  }
+  .soc-med-icon {
+      padding-right: 0.4rem;
+      padding-left: 0.4rem;
   }
 }
