@@ -1,86 +1,86 @@
 [
-    {
-        "title": "Donkey Kong Country",
-        "release_year": "1994",
-        "platform": "SNES",
-        "image": "dkc-box-art.png"
-    },
-    {
-        "title": "Donkey Kong Country 2",
-        "release_year": "1995",
-        "platform": "SNES",
-        "image": "dkc2-box-art.png"
-    },
-    {
-        "title": "Donkey Kong Country 3",
-        "release_year": "1996",
-        "platform": "SNES",
-        "image": "dkc3-box-art.png"
-    },
-    {
-        "title": "Yoshi's Island",
-        "release_year": "1995",
-        "platform": "SNES",
-        "image": "yoshi-box-art.png"
-    },
-    {
-        "title": "Mega Man X2",
-        "release_year": "1994",
-        "platform": "SNES",
-        "image": "mmx2-box-art.png"
-    },
-    {
-        "title": "Mega Man X3",
-        "release_year": "1995",
-        "platform": "SNES",
-        "image": "mmx3-box-art.png"
-    },
-    {
-        "title": "Bubsy",
-        "release_year": "1993",
-        "platform": "SNES",
-        "image": "bubsy-box-art.png"
-    },
-    {
-        "title": "Donkey Kong Country",
-        "release_year": "2003",
-        "platform": "GBA",
-        "image": "dkc-gba-box-art.png"
-    },
-    {
-        "title": "Donkey Kong Land",
-        "release_year": "1995",
-        "platform": "GB",
-        "image": "dkl-box-art.png"
-    },
-    {
-        "title": "Donkey Kong Land III",
-        "release_year": "1997",
-        "platform": "GBC",
-        "image": "dkl3-box-art.png"
-    },
-    {
-        "title": "E.V.O.: Search for Eden",
-        "release_year": "1992",
-        "platform": "SNES",
-        "image": "evo-box-art.png"
-    },
-    {
-        "title": "Paperboy 2",
-        "release_year": "1991",
-        "platform": "SNES",
-        "image": "pape-box-art.png"
-    },
-    {
-        "title": "Pokémon Stadium",
-        "release_year": "1999",
-        "platform": "N64",
-        "image": "stadium1-box-art.png"
-    },
-    {
-        "title": "Pokémon Stadium 2",
-        "release_year": "2000",
-        "platform": "N64",
-        "image": "stadium2-box-art.png"
-    }
+  {
+    "title": "Donkey Kong Country",
+    "release_year": "1994",
+    "platform": "SNES",
+    "image": "dkc-box-art.png"
+  },
+  {
+    "title": "Donkey Kong Country 2",
+    "release_year": "1995",
+    "platform": "SNES",
+    "image": "dkc2-box-art.png"
+  },
+  {
+    "title": "Donkey Kong Country 3",
+    "release_year": "1996",
+    "platform": "SNES",
+    "image": "dkc3-box-art.png"
+  },
+  {
+    "title": "Yoshi's Island",
+    "release_year": "1995",
+    "platform": "SNES",
+    "image": "yoshi-box-art.png"
+  },
+  {
+    "title": "Mega Man X2",
+    "release_year": "1994",
+    "platform": "SNES",
+    "image": "mmx2-box-art.png"
+  },
+  {
+    "title": "Mega Man X3",
+    "release_year": "1995",
+    "platform": "SNES",
+    "image": "mmx3-box-art.png"
+  },
+  {
+    "title": "Bubsy",
+    "release_year": "1993",
+    "platform": "SNES",
+    "image": "bubsy-box-art.png"
+  },
+  {
+    "title": "Donkey Kong Country",
+    "release_year": "2003",
+    "platform": "GBA",
+    "image": "dkc-gba-box-art.png"
+  },
+  {
+    "title": "Donkey Kong Land",
+    "release_year": "1995",
+    "platform": "GB",
+    "image": "dkl-box-art.png"
+  },
+  {
+    "title": "Donkey Kong Land III",
+    "release_year": "1997",
+    "platform": "GBC",
+    "image": "dkl3-box-art.png"
+  },
+  {
+    "title": "E.V.O.: Search for Eden",
+    "release_year": "1992",
+    "platform": "SNES",
+    "image": "evo-box-art.png"
+  },
+  {
+    "title": "Paperboy 2",
+    "release_year": "1991",
+    "platform": "SNES",
+    "image": "pape-box-art.png"
+  },
+  {
+    "title": "Pokémon Stadium",
+    "release_year": "1999",
+    "platform": "N64",
+    "image": "stadium1-box-art.png"
+  },
+  {
+    "title": "Pokémon Stadium 2",
+    "release_year": "2000",
+    "platform": "N64",
+    "image": "stadium2-box-art.png"
+  }
 ]
