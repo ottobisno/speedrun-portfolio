@@ -13,12 +13,12 @@ const client = new ApolloClient({
 });
 
 
-function App() {
+const App = () => {
   return (
     <ApolloProvider client={client}>
       <Header />
-        {/* <Home />
-      <Footer /> */}
+        {/* <Home /> */}
+      <Footer />
     </ApolloProvider>
   );
 }
