@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Enabling the app to access information from the GraphQL server and cache it
+// Enabling the app to access information from the GraphQL server
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache()
