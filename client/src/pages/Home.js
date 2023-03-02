@@ -1,12 +1,15 @@
-
-
+import LeftPanel from '../components/LeftPanel';
+import RightPanel from '../components/RightPanel';
 
 const Home = () => {   
   return (
-    <div class="container-xxl">
-      <div class="row p-3 justify-content-center">
-      
+    <div className="container-xxl">
+      <div className="row p-3 justify-content-center">
+        <LeftPanel />
+        <RightPanel />
       </div>
     </div>
   )
-}
+};
+
+export default Home;
