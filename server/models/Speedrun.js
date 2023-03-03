@@ -25,10 +25,18 @@ const speedrunSchema = new Schema({
     required: true
   },
   current_placement: {
-    type: Number,
+    type: String,
     required: true
   },
   video: {
+    type: String,
+    required: true
+  },
+  world_record: {
+    type: String,
+    required: true
+  },
+  goal: {
     type: String,
     required: true
   }

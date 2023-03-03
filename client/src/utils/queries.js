@@ -10,6 +10,8 @@ export const QUERY_SPEEDRUNS = gql`
       main_category
       personal_best
       video
+      world_record
+      goal
       game {
         _id
         image

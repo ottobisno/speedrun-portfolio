@@ -1,4 +1,3 @@
-
 const SpeedrunCard = ({ speedruns }) => {
   return (
     <div className="row gy-4">
@@ -17,11 +16,11 @@ const SpeedrunCard = ({ speedruns }) => {
                       <p className="supplemental-text">{speedrun.game.platform}, {speedrun.game.release_year}</p>
                       <div className="game-info">
                         <p>Main Category: <span className="supplemental-text">{speedrun.category}</span></p>
-                        <p>Personal Best: <span id="dkc-pb">{speedrun.personal_best}</span></p>
-                        <p>Date Achieved: <span id="dkc-pb-date">{speedrun.date_played}</span></p>
-                        <p>Current Standing: <span id="dkc-standing">{speedrun.current_placement}</span></p>
+                        <p>Personal Best: <span className="supplemental-text">{speedrun.personal_best}</span></p>
+                        <p>Date Achieved: <span className="supplemental-text">{speedrun.date_played}</span></p>
+                        <p>Current Standing: <span className="supplemental-text">{speedrun.current_placement}</span></p>
                       </div>
-                      <button id="dkc-btn" type="button" className="btn btn-light">More Details</button>
+                      <button type="button" className="btn btn-light details-btn">More Details</button>
                     </div>
                   </div>
                 </div>

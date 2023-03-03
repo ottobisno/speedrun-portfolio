@@ -2,7 +2,7 @@ const db = require('../config/connection');
 const { Game, Speedrun } = require('../models');
 const fetch = require('node-fetch');
 const gameData = require('./gameData');
-const { processSpeedrunData } = require('../utils/conversion');
+const { processSpeedrunData } = require('../utils/APIConversions');
 
 // Defining empty array to hold the processed speedrunData from the Speedrun.com API
 let speedrunData = [];
@@ -28,7 +28,7 @@ db.once('open', async () => {
     });
     const data = await response.json();
     console.log(data);
-    processSpeedrunData(data, games, speedrunData);
+    await processSpeedrunData(data, games, speedrunData);
 
   } catch (err) {
     console.log(err);

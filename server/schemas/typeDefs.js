@@ -16,8 +16,10 @@ const typeDefs = gql`
     main_category: Boolean
     personal_best: String
     date_played: String
-    current_placement: Int
+    current_placement: String
     video: String
+    world_record: String
+    goal: String
   }
 
   type Query {
