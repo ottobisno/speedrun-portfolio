@@ -1,9 +1,9 @@
 import SpeedrunCard from './SpeedrunCard';
 
-const SpeedrunList = ({ speedruns }) => {
+const SpeedrunList = () => {
   return (
     <div id="speedrun-cards" className="container p-2">
-      <SpeedrunCard speedruns={speedruns} />
+      <SpeedrunCard />
     </div>
   )
 };
