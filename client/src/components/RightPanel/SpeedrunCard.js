@@ -1,4 +1,9 @@
-const SpeedrunCard = ({ speedruns }) => {
+import { useContext } from 'react';
+import { SpeedrunContext } from '../../context/SpeedrunContext';
+
+const SpeedrunCard = () => {
+  const speedruns = useContext(SpeedrunContext);
+
   return (
     <div className="row gy-4">
       {speedruns &&

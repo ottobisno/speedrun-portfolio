@@ -1,3 +1,4 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-export const SpeedrunContext
+// Pass all speedrun data from the db to all child components
+export const SpeedrunContext = createContext();
