@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className="container-xxl">
-      <div className="row p-3 justify-content-center">
+      <div id="home-div" className="row justify-content-center">
         <SpeedrunContext.Provider value={speedruns}>
           <LeftPanel />
           <RightPanel />

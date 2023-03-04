@@ -13,6 +13,75 @@ body {
   background-size: cover;
 }
 
+/* Styles are in alphabetical order from this point onward */
+
+.bg-darker {
+  background-color: var(--darker);
+}
+
+.bg-darker-tp {
+  background-color: var(--darker-tp);
+}
+
+.border-bot {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: var(--light);
+}
+
+.border-sr-list-card {
+  border-right: solid;
+  border-width: 1px;
+  border-color: var(--light);
+}
+
+.card {
+  border-width: 1px;
+  border-color: var(--light);
+  border-radius: 5;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body p {
+  font-weight: normal;
+  margin-bottom: auto;
+}
+
+.card-h2 {
+  color: var(--light);
+  background: linear-gradient(0deg, rgb(35, 35, 35), rgb(25, 25, 25), rgb(15, 15, 15));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 0;
+}
+
+.container-xxl {
+  max-width: 1400px;
+}
+
+.container {
+  max-width: 1290px;
+}
+
+#controller-icon {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  margin-right: 0.5rem;
+}
+
+.game-info {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Francois One', sans-serif;
   font-weight: bolder;
@@ -23,12 +92,12 @@ h4 {
   margin-bottom: 0;
 }
 
-.bg-darker {
-  background-color: var(--darker);
+#home-div {
+  padding: 1rem;
 }
 
-.bg-darker-tp {
-  background-color: var(--darker-tp);
+.img-fluid {
+  min-width: 100%;
 }
 
 #navbar-container {
@@ -41,11 +110,26 @@ h4 {
   color: var(--grey-text);
 }
 
-#controller-icon {
-  display: inline-block;
-  position: relative;
-  bottom: 4px;
-  margin-right: 0.5rem;
+.rounded-sr-list-card {
+  border-bottom-left-radius: var(--bs-border-radius)!important;
+  border-top-left-radius: var(--bs-border-radius)!important;
+}
+
+.soc-med-icon {
+  text-decoration: none;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.sr-list-card {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.supplemental-text {
+  color: var(--grey-text);
+  font-weight: 500;
 }
 
 #title {
@@ -56,91 +140,61 @@ h4 {
   padding-left: 1rem;
 }
 
-.card {
-  border-width: 1px;
-  border-color: var(--light);
-  border-radius: 5;
-}
-
-.card-body {
-  padding: 10px;
-  /* padding-top: 0;
-  padding-bottom: 0; */
-}
-
-.card-body p {
-  font-weight: normal;
-  margin-bottom: auto;
-}
-
-.card-h2 {
-  color: var(--light);
-  background: linear-gradient(0deg, rgb(75, 75, 75), rgb(45, 45, 45), rgb(15, 15, 15));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin-bottom: 0;
-}
-
-.border-bot {
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: var(--light);
-}
-
-.supplemental-text {
-  color: var(--grey-text);
-  font-weight: 500;
-}
-
-.game-info {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.container-xxl {
-  max-width: 1400px;
-}
-
-/* Keep an eye on this, might need to specify container-lg once I update classes */
-.container {
-  max-width: 1120px;
-}
-
-.img-fluid {
-  min-width: 100%;
-}
-
-.soc-med-icon {
-  text-decoration: none;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
+/* Media queries in descending order of screen size */
 
 @media screen and (max-width: 1200px) {
-  .border-run-card {
-      border-bottom: solid;
-      border-width: 1px;
-      border-color: var(--light);
-  }
-  .rounded-run-card {
-      border-top-left-radius: var(--bs-border-radius)!important;
-      border-top-right-radius: var(--bs-border-radius)!important;
+  p {
+    font-size: calc(12px + 0.3vw);
+    margin-top: calc(3px + 0.16vw);
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .border-run-card {
-      border-right: solid;
+@media screen and (max-width: 991px) {
+  .border-sr-list-card {
+      border-bottom: solid;
+      border-right: none;
       border-width: 1px;
       border-color: var(--light);
   }
-  .rounded-run-card {
-      border-bottom-left-radius: var(--bs-border-radius)!important;
-      border-top-left-radius: var(--bs-border-radius)!important;
+  p {
+    font-size: calc(12px + 0.4vw);
+    margin-top: 0;
+  }
+  .rounded-sr-list-card {
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: var(--bs-border-radius);
+  }
+}
+
+@media screen and (max-width: 876px) {
+  h4 {
+    font-size: calc(16px + 0.4vw)
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h4 {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .border-sr-list-card {
+    border-bottom: none;
+    border-right: solid;
+    border-width: 1px;
+    border-color: var(--light);
+  }
+  #home-div {
+    padding: 0;
+  }
+  p {
+    font-size: calc(12px + 0.7vw);
+    margin-top: calc(3px + 0.2vw);
+  }
+  .rounded-sr-list-card {
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+    border-top-right-radius: 0;
   }
 }
 
@@ -150,9 +204,51 @@ h4 {
   }
 }
 
-@media screen and (max-width: 491px) {
+@media screen and (max-width: 500px) {
+  .game-info {
+    margin-top: 4px;
+  }
+  
+  .game-platform-year {
+    display: none;
+  }
+  h4 {
+    font-size: calc(16px + 0.6vw)
+  }
+  p {
+    font-size: calc(12px + 0.2vw);
+    margin-top: calc(3px + 0.8vw);
+  }
   #title {
-      font-size: calc(30px + 0.3vw);
+    font-size: calc(30px + 0.3vw);
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .border-sr-list-card {
+    border-bottom: solid;
+    border-right: none;
+    border-width: 1px;
+    border-color: var(--light);
+  }
+  .game-platform-year {
+    display: flex;
+  }
+  h4 {
+    font-size: 23px;
+  }
+  .img-col {
+    width: 100%;
+  }
+  .info-col {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+  }
+  .rounded-sr-list-card {
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius);
   }
 }
 

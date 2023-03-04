@@ -298,7 +298,7 @@ function processSpeedrunData(data, games, speedrunData) {
           speedrunData.push(
             {
               game: games[11]._id,
-              category: 'Easy Street - Perfect Delivery',
+              category: 'Easy St - Perfect Delivery',
               main_category: true,
               personal_best: formatPB(data.data[i].run.times.primary_t),
               date_played: formatDate(data.data[i].run.date),
@@ -312,7 +312,7 @@ function processSpeedrunData(data, games, speedrunData) {
           speedrunData.push(
             {
               game: games[11]._id,
-              category: 'Easy Street - Non-perfect Delivery',
+              category: 'Easy St - Non-perfect Delivery',
               main_category: false,
               personal_best: formatPB(data.data[i].run.times.primary_t),
               date_played: formatDate(data.data[i].run.date),
@@ -345,7 +345,7 @@ function processSpeedrunData(data, games, speedrunData) {
         speedrunData.push(
           {
             game: games[12]._id,
-            category: 'Gym Leader Castle Round 1',
+            category: 'Gym Leader Castle R1',
             main_category: true,
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
@@ -361,7 +361,7 @@ function processSpeedrunData(data, games, speedrunData) {
         speedrunData.push(
           {
             game: games[13]._id,
-            category: 'Gym Leader Castle Round 1',
+            category: 'Gym Leader Castle R1',
             main_category: true,
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),

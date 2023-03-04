@@ -5,22 +5,22 @@ const SpeedrunCard = () => {
   const speedruns = useContext(SpeedrunContext);
 
   return (
-    <div className="row gy-4">
+    <div className="row gy-4 justify-content-center">
       {speedruns &&
         speedruns.map((speedrun) => {
           if (speedrun.main_category) {
-            return <div key={speedrun._id} className="col-12 col-sm-6 col-md-4 col-xl-6">
-              <div className="card bg-darker">
+            return <div key={speedrun._id} className="col-12 col-sm-6 col-md-4 col-lg-6">
+              <div className="card sr-list-card bg-darker">
                 <div className="row gy-0 gx-1 align-items-center">
-                  <div className="col-12 col-xl-4">
-                    <img src={speedrun.game.image} className="img-fluid border-run-card rounded-run-card" alt="Video game box art" />
+                  <div className="img-col col-5 col-sm-12 col-lg-5 col-xl-4">
+                    <img src={speedrun.game.image} className="img-fluid border-sr-list-card rounded-sr-list-card" alt="Video game box art" />
                   </div>
-                  <div className="col-12 col-xl-8">
+                  <div className="info-col col-7 col-sm-12 col-lg-7 col-xl-8">
                     <div className="card-body d-flex flex-column">
                       <h4>{speedrun.game.title}</h4>
-                      <p className="supplemental-text">{speedrun.game.platform}, {speedrun.game.release_year}</p>
+                      <p className="supplemental-text game-platform-year">{speedrun.game.platform}, {speedrun.game.release_year}</p>
                       <div className="game-info">
-                        <p>Main Category: <span className="supplemental-text">{speedrun.category}</span></p>
+                        <p>Category: <span className="supplemental-text">{speedrun.category}</span></p>
                         <p>Personal Best: <span className="supplemental-text">{speedrun.personal_best}</span></p>
                         <p>Date Achieved: <span className="supplemental-text">{speedrun.date_played}</span></p>
                         <p>Current Standing: <span className="supplemental-text">{speedrun.current_placement}</span></p>
