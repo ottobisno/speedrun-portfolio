@@ -29,10 +29,12 @@ body {
   border-color: var(--light);
 }
 
-.border-sr-list-card {
+.sr-list-card-img {
   border-right: solid;
   border-width: 1px;
   border-color: var(--light);
+  border-bottom-left-radius: var(--bs-border-radius)!important;
+  border-top-left-radius: var(--bs-border-radius)!important;
 }
 
 .card {
@@ -110,11 +112,6 @@ h4 {
   color: var(--grey-text);
 }
 
-.rounded-sr-list-card {
-  border-bottom-left-radius: var(--bs-border-radius)!important;
-  border-top-left-radius: var(--bs-border-radius)!important;
-}
-
 .soc-med-icon {
   text-decoration: none;
   padding-right: 1rem;
@@ -150,19 +147,17 @@ h4 {
 }
 
 @media screen and (max-width: 991px) {
-  .border-sr-list-card {
+  .sr-list-card-img {
       border-bottom: solid;
       border-right: none;
       border-width: 1px;
       border-color: var(--light);
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: var(--bs-border-radius);
   }
   p {
     font-size: calc(12px + 0.4vw);
     margin-top: 0;
-  }
-  .rounded-sr-list-card {
-      border-bottom-left-radius: 0 !important;
-      border-top-right-radius: var(--bs-border-radius);
   }
 }
 
@@ -174,16 +169,18 @@ h4 {
 
 @media screen and (max-width: 767px) {
   h4 {
-    font-size: 23px;
+    font-size: calc(16px + 1.2vw)
   }
 }
 
 @media screen and (max-width: 576px) {
-  .border-sr-list-card {
+  .sr-list-card-img {
     border-bottom: none;
     border-right: solid;
     border-width: 1px;
     border-color: var(--light);
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+    border-top-right-radius: 0;
   }
   #home-div {
     padding: 0;
@@ -191,10 +188,6 @@ h4 {
   p {
     font-size: calc(12px + 0.7vw);
     margin-top: calc(3px + 0.2vw);
-  }
-  .rounded-sr-list-card {
-    border-bottom-left-radius: var(--bs-border-radius) !important;
-    border-top-right-radius: 0;
   }
 }
 
@@ -208,7 +201,6 @@ h4 {
   .game-info {
     margin-top: 4px;
   }
-  
   .game-platform-year {
     display: none;
   }
@@ -225,11 +217,43 @@ h4 {
 }
 
 @media screen and (max-width: 424px) {
-  .border-sr-list-card {
+  .card-body {
+    padding: 5px !important;
+  }
+  .img-col {
+    width: 50%;
+  }
+  .info-col {
+    width: 50%;
+  }
+  .sr-list-card-div {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .navbar {
+      justify-content: center;
+  }
+  .soc-med-icon {
+      padding-right: 0.4rem;
+      padding-left: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .sr-list-card-img {
     border-bottom: solid;
     border-right: none;
     border-width: 1px;
     border-color: var(--light);
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius);
+  }
+  .card-body {
+    padding: 10px !important;
   }
   .game-platform-year {
     display: flex;
@@ -245,19 +269,5 @@ h4 {
   }
   p {
     font-size: 14px;
-  }
-  .rounded-sr-list-card {
-    border-bottom-left-radius: 0 !important;
-    border-top-right-radius: var(--bs-border-radius);
-  }
-}
-
-@media screen and (max-width: 404px) {
-  .navbar {
-      justify-content: center;
-  }
-  .soc-med-icon {
-      padding-right: 0.4rem;
-      padding-left: 0.4rem;
   }
 }
