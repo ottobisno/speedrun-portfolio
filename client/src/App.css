@@ -15,18 +15,18 @@ body {
 
 /* Styles are in alphabetical order from this point onward */
 
+#about-img {
+  border-bottom-style: solid;
+  border-color: var(--light);
+  border-width: 1px;
+}
+
 .bg-darker {
   background-color: var(--darker);
 }
 
 .bg-darker-tp {
   background-color: var(--darker-tp);
-}
-
-.border-bot {
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: var(--light);
 }
 
 .sr-list-card-img {
@@ -102,6 +102,12 @@ h4 {
   min-width: 100%;
 }
 
+.latest-plans-img {
+  border-bottom-style: solid;
+  border-color: var(--light);
+  border-width: 1px;
+}
+
 #navbar-container {
   --bs-gutter-x: 0;
   font-family: 'Francois One', sans-serif;
@@ -139,9 +145,23 @@ h4 {
 
 /* Media queries in descending order of screen size */
 
+@media screen and (max-width: 1399px) {
+  #about-img {
+    border-bottom-style: none;
+    border-bottom-left-radius: var(--bs-border-radius);
+  }
+  .latest-plans-img {
+    border-bottom-style: none;
+    border-bottom-left-radius: var(--bs-border-radius);
+  }
+  .left-panel-card-body {
+    padding-left: 0;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   p {
-    font-size: calc(12px + 0.3vw);
+    font-size: calc(12px + 0.28vw);
     margin-top: calc(3px + 0.16vw);
   }
 }
@@ -173,6 +193,21 @@ h4 {
   }
 }
 
+@media screen and (max-width: 700px) {
+  #about-img {
+    display: none;
+  }
+  #about-img-col {
+    width: 100%;
+  }
+  #about-info-col {
+    width: 100%;
+  }
+  #about-img-card-body {
+    padding-left: 10px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .sr-list-card-img {
     border-bottom: none;
@@ -198,6 +233,9 @@ h4 {
 }
 
 @media screen and (max-width: 500px) {
+  #about-img {
+    display: inline;
+  }
   .game-info {
     margin-top: 4px;
   }
@@ -206,6 +244,10 @@ h4 {
   }
   h4 {
     font-size: calc(16px + 0.6vw)
+  }
+  #about-img {
+    border-bottom-style: solid;
+    border-bottom-left-radius: 0;
   }
   p {
     font-size: calc(12px + 0.2vw);
@@ -220,10 +262,10 @@ h4 {
   .card-body {
     padding: 5px !important;
   }
-  .img-col {
+  .sr-img-col {
     width: 50%;
   }
-  .info-col {
+  .sr-info-col {
     width: 50%;
   }
   .sr-list-card-div {
@@ -234,6 +276,16 @@ h4 {
 }
 
 @media screen and (max-width: 404px) {
+  .latest-plans-img {
+    border-bottom-style: solid;
+    border-bottom-left-radius: 0;
+  }
+  .latest-plans-img-col {
+    width: 100%;
+  }
+  .latest-plans-info-col {
+    width: 100%;
+  }
   .navbar {
       justify-content: center;
   }
@@ -261,10 +313,10 @@ h4 {
   h4 {
     font-size: 23px;
   }
-  .img-col {
+  .sr-img-col {
     width: 100%;
   }
-  .info-col {
+  .sr-info-col {
     width: 100%;
   }
   p {

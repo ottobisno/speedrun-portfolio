@@ -2,7 +2,7 @@ import SpeedrunCard from './SpeedrunCard';
 
 const SpeedrunList = () => {
   return (
-    <div id="speedrun-cards" className="container p-2">
+    <div className="container p-2">
       <SpeedrunCard />
     </div>
   )

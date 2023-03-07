@@ -12,10 +12,10 @@ const SpeedrunCard = () => {
             return <div key={speedrun._id} className="sr-list-card-div col-12 col-sm-6 col-md-4 col-lg-6">
               <div className="card sr-list-card bg-darker">
                 <div className="row gy-0 gx-1 align-items-center">
-                  <div className="img-col col-5 col-sm-12 col-lg-5 col-xl-4">
+                  <div className="sr-img-col col-5 col-sm-12 col-lg-5 col-xl-4">
                     <img src={speedrun.game.image} className="img-fluid sr-list-card-img" alt="Video game box art" />
                   </div>
-                  <div className="info-col col-7 col-sm-12 col-lg-7 col-xl-8">
+                  <div className="sr-info-col col-7 col-sm-12 col-lg-7 col-xl-8">
                     <div className="card-body d-flex flex-column">
                       <h4>{speedrun.game.title}</h4>
                       <p className="supplemental-text game-platform-year">{speedrun.game.platform}, {speedrun.game.release_year}</p>
@@ -32,7 +32,7 @@ const SpeedrunCard = () => {
               </div>
             </div>
           }
-      })}
+        })}
     </div>
   )
 };
