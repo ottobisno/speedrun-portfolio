@@ -19,7 +19,7 @@ function formatVideo(link) {
   // Formatting possible Twitch.tv links
   if (link.substring(8,24) === 'www.twitch.tv/vi') {
     let id = link.substring(29);
-    return `https://player.twitch.tv/?video=v${id}&parent=localhost&autoplay=false`
+    return `https://player.twitch.tv/?video=v${id}&parent=www.heroku.com&autoplay=false`
   }
 };
 
