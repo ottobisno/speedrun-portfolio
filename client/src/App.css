@@ -29,14 +29,6 @@ body {
   background-color: var(--darker-tp);
 }
 
-.sr-list-card-img {
-  border-right: solid;
-  border-width: 1px;
-  border-color: var(--light);
-  border-bottom-left-radius: var(--bs-border-radius)!important;
-  border-top-left-radius: var(--bs-border-radius)!important;
-}
-
 .card {
   border-width: 1px;
   border-color: var(--light);
@@ -64,6 +56,10 @@ body {
   margin-bottom: 0;
 }
 
+#category-form {
+  min-width: 200px;
+}
+
 .container-xxl {
   max-width: 1400px;
 }
@@ -79,9 +75,15 @@ body {
   margin-right: 0.5rem;
 }
 
-.game-info {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+#game-img {
+  border-style: solid;
+  border-radius: var(--bs-border-radius);
+  border-color: var(--light);
+  border-width: 1px;
+}
+
+.game-info-item {
+  margin-top: calc(3px + 0.1vw);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -130,6 +132,19 @@ h4 {
   margin-right: auto;
 }
 
+.sr-list-card-img {
+  border-right: solid;
+  border-width: 1px;
+  border-color: var(--light);
+  border-bottom-left-radius: var(--bs-border-radius) !important;
+  border-top-left-radius: var(--bs-border-radius) !important;
+}
+
+.sr-list-game-info {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .supplemental-text {
   color: var(--grey-text);
   font-weight: 500;
@@ -160,31 +175,32 @@ h4 {
 }
 
 @media screen and (max-width: 1200px) {
+  .list-info-item {
+    margin-top: calc(3px + 0.16vw);
+  }
   p {
     font-size: calc(12px + 0.28vw);
-    margin-top: calc(3px + 0.16vw);
   }
 }
 
 @media screen and (max-width: 991px) {
-  .sr-list-card-img {
-      border-bottom: solid;
-      border-right: none;
-      border-width: 1px;
-      border-color: var(--light);
-      border-bottom-left-radius: 0 !important;
-      border-top-right-radius: var(--bs-border-radius);
+  h4 {
+    font-size: calc(16px + 0.2vw)
+  }
+  .list-info-item {
+    margin-top: 0;
   }
   p {
     font-size: calc(12px + 0.4vw);
-    margin-top: 0;
   }
+  .sr-list-card-img {
+    border-bottom: solid;
+    border-right: none;
+    border-width: 1px;
+    border-color: var(--light);
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius);
 }
-
-@media screen and (max-width: 876px) {
-  h4 {
-    font-size: calc(16px + 0.4vw)
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -209,6 +225,15 @@ h4 {
 }
 
 @media screen and (max-width: 576px) {
+  #home-div {
+    padding: 0;
+  }
+  .list-info-item {
+    margin-top: calc(3px + 0.2vw);
+  }
+  p {
+    font-size: calc(12px + 0.7vw);
+  }
   .sr-list-card-img {
     border-bottom: none;
     border-right: solid;
@@ -216,13 +241,6 @@ h4 {
     border-color: var(--light);
     border-bottom-left-radius: var(--bs-border-radius) !important;
     border-top-right-radius: 0;
-  }
-  #home-div {
-    padding: 0;
-  }
-  p {
-    font-size: calc(12px + 0.7vw);
-    margin-top: calc(3px + 0.2vw);
   }
 }
 
@@ -234,10 +252,9 @@ h4 {
 
 @media screen and (max-width: 500px) {
   #about-img {
+    border-bottom-style: solid;
+    border-bottom-left-radius: 0;
     display: inline;
-  }
-  .game-info {
-    margin-top: 4px;
   }
   .game-platform-year {
     display: none;
@@ -245,13 +262,14 @@ h4 {
   h4 {
     font-size: calc(16px + 0.6vw)
   }
-  #about-img {
-    border-bottom-style: solid;
-    border-bottom-left-radius: 0;
+  .list-info-item {
+    margin-top: calc(3px + 0.8vw);
   }
   p {
     font-size: calc(12px + 0.2vw);
-    margin-top: calc(3px + 0.8vw);
+  }
+  .sr-list-game-info {
+    margin-top: 4px;
   }
   #title {
     font-size: calc(30px + 0.3vw);
@@ -296,14 +314,6 @@ h4 {
 }
 
 @media screen and (max-width: 374px) {
-  .sr-list-card-img {
-    border-bottom: solid;
-    border-right: none;
-    border-width: 1px;
-    border-color: var(--light);
-    border-bottom-left-radius: 0 !important;
-    border-top-right-radius: var(--bs-border-radius);
-  }
   .card-body {
     padding: 10px !important;
   }
@@ -318,6 +328,14 @@ h4 {
   }
   .sr-info-col {
     width: 100%;
+  }
+  .sr-list-card-img {
+    border-bottom: solid;
+    border-right: none;
+    border-width: 1px;
+    border-color: var(--light);
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius);
   }
   p {
     font-size: 14px;
