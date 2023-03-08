@@ -7,12 +7,6 @@ const resolvers = {
     },
     speedruns: async () => {
       return await Speedrun.find({}).populate('game');
-    },
-    game: async (parent, { _id }) => {
-      return await Game.findById(_id);
-    },
-    speedrun: async (parent, { _id }) => {
-      return await Speedrun.findById(_id).populate('game');
     }
   }
 };
