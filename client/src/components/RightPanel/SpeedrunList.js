@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { SpeedrunContext } from '../../context/SpeedrunContext';
 
-const SpeedrunList = () => {
+const SpeedrunList = ({ handlePageChange }) => {
   const speedruns = useContext(SpeedrunContext);
 
   return (
@@ -26,7 +26,7 @@ const SpeedrunList = () => {
                           <p className="list-info-item">Date Achieved: <span className="supplemental-text">{speedrun.date_played}</span></p>
                           <p className="list-info-item">Current Standing: <span className="supplemental-text">{speedrun.current_placement}</span></p>
                         </div>
-                        <button type="button" className="btn btn-light details-btn">More Details</button>
+                        <a type="button" className="btn btn-light details-btn" href="#my-speedruns" onClick={() => handlePageChange(speedrun._id)}>More Details</a>
                       </div>
                     </div>
                   </div>

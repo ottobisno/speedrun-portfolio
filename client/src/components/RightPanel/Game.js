@@ -1,15 +1,14 @@
 import { useContext } from 'react';
 import { SpeedrunContext } from '../../context/SpeedrunContext';
 
-const Game = () => {
+const Game = ({ currentGame, handlePageChange }) => {
   const speedruns = useContext(SpeedrunContext);
 
-  // Wrap img, info, and buttons into their own div, and have the video in its own div
-  // Change order when screen shrinks and cols are stacked(?)
   return (
     <div className="row">
+      {/* Displaying info for the game whose button was clicked */}
       {speedruns &&
-        speedruns.filter((speedrun) => speedrun.game.title === 'Donkey Kong Country 3').map((speedrun) => {
+        speedruns.filter((speedrun) => speedrun._id === currentGame).map((speedrun) => {
           return <>
             <div className="col-12 col-md-5">
               <div className="row d-flex justify-content-center">
@@ -30,13 +29,14 @@ const Game = () => {
                 </div>               
                 <div id="game-cat-col" className="col-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
                   <div className="d-flex flex-column align-items-center">
-                    <select id="category-form" class="form-select form-select-sm" aria-label="Default select example">
-                      <option selected>{speedrun.category}</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                    {/* Drop-down menu populated with each game's categories */}
+                    <select id="category-form" class="form-select form-select-sm" onChange={(event) => handlePageChange(event.target.value)}>
+                      {speedruns &&
+                        speedruns.filter((run) => run.game.title === speedrun.game.title && run.game.platform === speedrun.game.platform).map((run) => {
+                          return <option value={run._id}>{run.category}</option>
+                        })}                             
                     </select>
-                    <button type="button" className="btn btn-light details-btn mt-2">Go Back</button>
+                    <button type="button" className="btn btn-light details-btn mt-2" onClick={() => handlePageChange('List')}>Go Back</button>
                   </div>
                 </div>
               </div>
