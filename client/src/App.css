@@ -317,17 +317,23 @@ h4 {
   .card-body {
     padding: 10px !important;
   }
+  #game-img-col {
+    width: 33.3%;
+  }
+  #game-info-col {
+    width: 66.7%;
+  }
   .game-platform-year {
     display: flex;
-  }
-  h4 {
-    font-size: 23px;
   }
   .sr-img-col {
     width: 100%;
   }
   .sr-info-col {
     width: 100%;
+  }
+  .sr-list-game-title {
+    font-size: 23px;
   }
   .sr-list-card-img {
     border-bottom: solid;

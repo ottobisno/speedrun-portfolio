@@ -28,7 +28,7 @@ const Game = () => {
                     <p className="game-info-item">World Record: <span className="supplemental-text">{speedrun.world_record}</span></p>
                   </div>
                 </div>               
-                <div className="col-12 col-sm-12 col-md-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
+                <div id="game-cat-col" className="col-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
                   <div className="d-flex flex-column align-items-center">
                     <select id="category-form" class="form-select form-select-sm" aria-label="Default select example">
                       <option selected>{speedrun.category}</option>
@@ -41,7 +41,7 @@ const Game = () => {
                 </div>
               </div>
             </div>
-            <div id="game-video" className="col-12 col-md-7 mt-2 mt-md-0 d-flex align-items-center">
+            <div id="game-video-col" className="col-12 col-md-7 mt-2 mt-md-0 d-flex align-items-center">
               <div className="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/pkJHFPva_vM" id="video" title="Personal Best" allowFullScreen></iframe>
               </div>

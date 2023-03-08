@@ -18,7 +18,7 @@ const SpeedrunList = () => {
                     </div>
                     <div className="sr-info-col col-7 col-sm-12 col-lg-7 col-xl-8">
                       <div className="card-body d-flex flex-column">
-                        <h4>{speedrun.game.title}</h4>
+                        <h4 className="sr-list-game-title">{speedrun.game.title}</h4>
                         <p className="supplemental-text game-platform-year">{speedrun.game.platform}, {speedrun.game.release_year}</p>
                         <div className="sr-list-game-info">
                           <p className="list-info-item">Category: <span className="supplemental-text">{speedrun.category}</span></p>
