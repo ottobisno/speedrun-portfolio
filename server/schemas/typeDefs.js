@@ -25,6 +25,8 @@ const typeDefs = gql`
   type Query {
     games: [Game]
     speedruns: [Speedrun]
+    game(_id: ID): Game
+    speedrun(_id: ID): Speedrun
   }
 `;
 

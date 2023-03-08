@@ -30,7 +30,7 @@ const Game = ({ currentGame, handlePageChange }) => {
                 <div id="game-cat-col" className="col-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
                   <div className="d-flex flex-column align-items-center">
                     {/* Drop-down menu populated with each game's categories */}
-                    <select id="category-form" className="form-select form-select-sm" onChange={(event) => handlePageChange(event.target.value)}>
+                    <select id="category-form" className="form-select form-select-sm" aria-label="Default select example" onChange={(event) => handlePageChange(event.target.value)}>
                       {speedruns &&
                         speedruns.filter((run) => run.game.title === speedrun.game.title && run.game.platform === speedrun.game.platform).map((run) => {
                           return <option key={run._id} value={run._id}>{run.category}</option>
