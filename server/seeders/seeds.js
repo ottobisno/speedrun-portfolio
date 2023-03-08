@@ -7,7 +7,7 @@ const { processSpeedrunData } = require('../utils/APIConversions');
 // Defining empty array to hold the processed speedrunData from the Speedrun.com API
 let speedrunData = [];
 
-// Rewrite this to be db.once etc if you can do it all in one function
+// Seeding database
 db.once('open', async () => {
   
   // Clearing out any existing documents

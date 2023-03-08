@@ -4,6 +4,25 @@ function formatDate(date) {
   return `${_date.getMonth() + 1}/${_date.getDate()}/${_date.getFullYear()}`;
 };
 
+// Function for formatting video links into a format that can be embedded
+function formatVideo(link) {
+  // Formatting possible YouTube links
+  if (link.substring(8,14) === 'youtu.') {
+    let id = link.substring(17);
+    return `https://youtube.com/embed/${id}`
+  } 
+  if (link.substring(8,29) === 'www.youtube.com/watch') {
+    let id = link.substring(32);
+    return `https://youtube.com/embed/${id}`
+  }
+
+  // Formatting possible Twitch.tv links
+  if (link.substring(8,24) === 'www.twitch.tv/vi') {
+    let id = link.substring(29);
+    return `https://player.twitch.tv/?video=v${id}&parent=localhost&autoplay=false`
+  }
+};
+
 // Function for converting pb time from seconds to hh:mm:ss.ms accordingly
 function formatPB(pb) {
   // Converting pb from seconds to hh:mm:ss.ms
@@ -14,7 +33,7 @@ function formatPB(pb) {
     formattedPB = formattedPB.substring(0,7)
   }
 
-  // If the pb is <10 mins, truncate the tens place for the mins. Else if the pb is less than an hour long, truncate the hours completely.
+  // If the pb is < 1hr, truncate hours. If the pb is <10 mins, truncate the tenths place for mins as well
   if (formattedPB.slice(0,3) == '0:0') {
     formattedPB = formattedPB.slice(3);
 
@@ -62,7 +81,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '30:49',
             goal: '30:XX'
           }
@@ -78,7 +97,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '33:59',
             goal: '33:5X'
           }
@@ -94,7 +113,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '7:28.883',
             goal: '7:29'
           }
@@ -110,7 +129,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '40:23',
             goal: '40:2X'
           }
@@ -126,7 +145,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '44:48',
             goal: '44:XX'
           }
@@ -142,7 +161,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '37:48',
             goal: '38:2X'
           }
@@ -158,7 +177,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '45:46',
             goal: '46:XX'
           }
@@ -174,7 +193,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '1:40:53',
             goal: '1:42:XX'
           }
@@ -190,7 +209,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '32:26',
             goal: '32:XX'
           }
@@ -206,7 +225,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '39:15',
             goal: '39:3X'
           }
@@ -222,7 +241,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '14:53',
             goal: '14:4X'
           }
@@ -238,7 +257,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '38:13',
             goal: '37:5X'
           }
@@ -254,7 +273,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '29:15',
             goal: 'WR'
           }
@@ -270,7 +289,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '32:39',
             goal: 'N/A'
           }
@@ -286,7 +305,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '42:51',
             goal: '42:XX'
           }
@@ -303,7 +322,7 @@ function processSpeedrunData(data, games, speedrunData) {
               personal_best: formatPB(data.data[i].run.times.primary_t),
               date_played: formatDate(data.data[i].run.date),
               current_placement: formatPlacement(data.data[i].place),
-              video: data.data[i].run.videos.links[0].uri,
+              video: formatVideo(data.data[i].run.videos.links[0].uri),
               world_record: '10:02.983',
               goal: 'N/A'
             }
@@ -317,7 +336,7 @@ function processSpeedrunData(data, games, speedrunData) {
               personal_best: formatPB(data.data[i].run.times.primary_t),
               date_played: formatDate(data.data[i].run.date),
               current_placement: formatPlacement(data.data[i].place),
-              video: data.data[i].run.videos.links[0].uri,
+              video: formatVideo(data.data[i].run.videos.links[0].uri),
               world_record: '10:15.617',
               goal: '<10:02.983'
             }
@@ -334,7 +353,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '11:26.050',
             goal: 'N/A'
           }
@@ -350,7 +369,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '1:32:52',
             goal: 'N/A'
           }
@@ -366,7 +385,7 @@ function processSpeedrunData(data, games, speedrunData) {
             personal_best: formatPB(data.data[i].run.times.primary_t),
             date_played: formatDate(data.data[i].run.date),
             current_placement: formatPlacement(data.data[i].place),
-            video: data.data[i].run.videos.links[0].uri,
+            video: formatVideo(data.data[i].run.videos.links[0].uri),
             world_record: '2:03:27',
             goal: 'N/A'
           }

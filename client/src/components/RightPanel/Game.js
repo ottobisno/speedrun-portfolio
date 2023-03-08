@@ -10,9 +10,9 @@ const Game = ({ currentGame, handlePageChange }) => {
       {speedruns &&
         speedruns.filter((speedrun) => speedrun._id === currentGame).map((speedrun) => {
           return <>
-            <div className="col-12 col-md-5">
+            <div key={speedrun._id} className="col-12 col-md-5">
               <div className="row d-flex justify-content-center">
-                <div key={speedrun._id} id="game-img-col" className="col-5 col-sm-3 col-md-4 col-xl-5">
+                <div id="game-img-col" className="col-5 col-sm-3 col-md-4 col-xl-5">
                   <img src={speedrun.game.image} id="game-img" className="img-fluid"></img>
                 </div>
                 <div id="game-info-col" className="col-7 col-sm-5 col-md-8 col-xl-7">
@@ -30,10 +30,10 @@ const Game = ({ currentGame, handlePageChange }) => {
                 <div id="game-cat-col" className="col-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
                   <div className="d-flex flex-column align-items-center">
                     {/* Drop-down menu populated with each game's categories */}
-                    <select id="category-form" class="form-select form-select-sm" onChange={(event) => handlePageChange(event.target.value)}>
+                    <select id="category-form" className="form-select form-select-sm" onChange={(event) => handlePageChange(event.target.value)}>
                       {speedruns &&
                         speedruns.filter((run) => run.game.title === speedrun.game.title && run.game.platform === speedrun.game.platform).map((run) => {
-                          return <option value={run._id}>{run.category}</option>
+                          return <option key={run._id} value={run._id}>{run.category}</option>
                         })}                             
                     </select>
                     <button type="button" className="btn btn-light details-btn mt-2" onClick={() => handlePageChange('List')}>Go Back</button>
@@ -43,7 +43,7 @@ const Game = ({ currentGame, handlePageChange }) => {
             </div>
             <div id="game-video-col" className="col-12 col-md-7 mt-2 mt-md-0 d-flex align-items-center">
               <div className="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/pkJHFPva_vM" id="video" title="Personal Best" allowFullScreen></iframe>
+                <iframe src={speedrun.video} id="video" title="Personal Best" allowFullScreen></iframe>
               </div>
             </div>
           </>
@@ -53,20 +53,3 @@ const Game = ({ currentGame, handlePageChange }) => {
 };
 
 export default Game;
-
-
-// Desired formats
-
-// https://player.twitch.tv/?video=v1709711655&parent=localhost&autoplay=false
-// https://youtube.com/embed/7nzeK7RBURw
-
-// Options
-
-// Youtube
-// https://youtu.be/7nzeK7RBURw
-// https://www.youtube.com/watch?v=pkJHFPva_vM
-
-// Twitch
-// https://www.twitch.tv/videos/1502109010
-
-// Note: the only defining feature of these URLs is the id - find a way to extract the id and just add that into the ideal string template
