@@ -14,7 +14,7 @@ const RightPanel = () => {
     if (currentGame === 'List') {
       return <SpeedrunList handlePageChange={handlePageChange} />
     } else {
-        return <Game currentGame={currentGame} handlePageChange={handlePageChange} />
+      return <Game currentGame={currentGame} handlePageChange={handlePageChange} />
     }
   }
 

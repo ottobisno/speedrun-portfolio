@@ -29,11 +29,15 @@ const Game = ({ currentGame, handlePageChange }) => {
                 </div>               
                 <div id="game-cat-col" className="col-12 mt-2 mt-xl-4 d-flex justify-content-center align-items-center">
                   <div className="d-flex flex-column align-items-center">
-                    {/* Drop-down menu populated with each game's categories */}
-                    <select id="category-form" className="form-select form-select-sm" aria-label="Default select example" onChange={(event) => handlePageChange(event.target.value)}>
+                    {/* Drop-down menu populated with each game's categories, ensuring the selected option matches the currentGame */}
+                    <select id="category-form" className="form-select form-select-sm" aria-label=".form-select-sm example" onChange={(event) => handlePageChange(event.target.value)}>
                       {speedruns &&
                         speedruns.filter((run) => run.game.title === speedrun.game.title && run.game.platform === speedrun.game.platform).map((run) => {
-                          return <option key={run._id} value={run._id}>{run.category}</option>
+                          if (run._id === currentGame) {
+                            return <option selected key={run._id} value={run._id}>{run.category}</option>
+                          } else {
+                            return <option key={run._id} value={run._id}>{run.category}</option>
+                          }
                         })}                             
                     </select>
                     <button type="button" className="btn btn-light details-btn mt-2" onClick={() => handlePageChange('List')}>Go Back</button>

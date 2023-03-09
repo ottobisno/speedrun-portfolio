@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="container-fluid" id="navbar-container">
       <nav className="navbar navbar-expand-lg navbar-dark bg-darker">
-        <a href="#" className="navbar-brand" id="title">
+        <a className="navbar-brand" id="title">
           <img src={navIcon} alt="Icon of a Super Nintendo controller" width="50" height="50" id="controller-icon" />
           Silent Wolf's Speedruns
         </a>
