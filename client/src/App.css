@@ -165,9 +165,15 @@ h4 {
     border-bottom-style: none;
     border-bottom-left-radius: var(--bs-border-radius);
   }
+  #about-info-col {
+    padding-left: 0;
+  }
   .latest-plans-img {
     border-bottom-style: none;
     border-bottom-left-radius: var(--bs-border-radius);
+  }
+  .latest-plans-info-col {
+    padding-left: 0;
   }
   .left-panel-card-body {
     padding-left: 0;
@@ -222,11 +228,17 @@ h4 {
   #about-img-card-body {
     padding-left: 10px;
   }
+  #about-info-col {
+    padding-left: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   #home-div {
     padding: 0;
+  }
+  .latest-plans-info-col {
+    padding-left: 0;
   }
   .list-info-item {
     margin-top: calc(3px + 0.2vw);
@@ -303,6 +315,7 @@ h4 {
   }
   .latest-plans-info-col {
     width: 100%;
+    padding-left: 12px;
   }
   .navbar {
       justify-content: center;
